@@ -1,5 +1,9 @@
 
 const hand = ["rock","paper","scissors"];
+let winCount = 0;
+let gameRound = 0;
+const notification = document.querySelector('#notification');
+let result = document.createElement('h2');
 
 function getComputerChoice(){
     let randomChoice = random(0,3);
@@ -41,6 +45,8 @@ function playRound(playerSelection, computerSelection) {
     return output;
 }
 
+/** PROMPT VERSION */
+/*
 function singleGame(){
     let playerSelection = prompt("Please enter either rock, paper, scissors", "rock");
     let computerSelection = getComputerChoice();
@@ -48,15 +54,37 @@ function singleGame(){
     gameRound++;
     console.log(`You won ${winCount} out of ${gameRound} games`);
 }
-   
-let winCount = 0;
-let gameRound = 0;
-
-//console.log(computerSelection);
-//console.log(playRound(playerSelection, computerSelection));
 
 function game(number){
     for (let i=0; i<number; i++){
         singleGame();
     }
 }
+*/
+
+/** GUI VERSION */
+
+function singleGameInput(playerSelection){
+    let computerSelection = getComputerChoice();
+
+    result.textContent = playRound(playerSelection, computerSelection);
+    result.textContent +=`\n Tally: You won ${winCount} out of ${gameRound} games`;
+    gameRound++;
+
+    if (gameRound > 4) {
+        gameRound = 0;
+        if (winCount > 2) result.textContent += '\n Congrats! You Win the Game!';
+        else result.textContent += '\n Game Over! You Lost!';
+    } 
+
+    notification.appendChild(result);
+}
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach(button => button.addEventListener('click', function(){
+    let buttonPressed = this.getAttribute('id');
+    singleGameInput(buttonPressed);
+ }
+ ));
+
+

@@ -2,10 +2,22 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>ROck Paper Scissors Game</title>
-    <script src="rock-paper-scissors.js"></script>
+    <title>Rock Paper Scissors Game</title>
+    <script src="rock-paper-scissors.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <h1>Rock, Paper, Scissors</h1>
+    <div id="opponent-container">
+        <img src="https://placehold.co/400" width="200" height="200">
+        <h4>Your Opponent Name</h4>
+    </div>
+    <h2> VS </h2>
+    <div id="player-container">
+        <button id="rock">ROCK</button>
+        <button id="paper">PAPER</button>
+        <button id="scissors">SCISSORS</button>
+    </div>
+    <div id="notification"></div>
 </body>
 </html>
