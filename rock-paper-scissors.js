@@ -80,7 +80,7 @@ function singleGameInput(playerSelection){
     notification.appendChild(result);
 }
 
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('.playerinput');
 buttons.forEach(button => button.addEventListener('click', function(){
     let buttonPressed = this.getAttribute('id');
     singleGameInput(buttonPressed);

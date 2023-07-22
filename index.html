@@ -8,15 +8,30 @@
 </head>
 <body>
     <h1>Rock, Paper, Scissors</h1>
-    <div id="opponent-container">
-        <img src="https://placehold.co/400" width="200" height="200">
-        <h4>Your Opponent Name</h4>
-    </div>
-    <h2> VS </h2>
-    <div id="player-container">
-        <button id="rock">ROCK</button>
-        <button id="paper">PAPER</button>
-        <button id="scissors">SCISSORS</button>
+    <div id="container">
+        <div id="player-container" class="game-container">
+            <img src="https://placehold.co/100" width="100" height="100">
+            <h4>YOU</h4>
+            <div class="controller">
+                <div id="rock" class="playerinput rock-icon">ROCK</div>
+                <div id="paper" class="playerinput paper-icon">PAPER</div>
+                <div id="scissors" class="playerinput scissors-icon">SCISSORS</div>
+            </div>
+
+        </div>
+        <div>
+            <h2><span>0</span> VS <span>0</span></h2>
+        </div>
+
+        <div id="opponent-container" class="game-container">
+            <img src="https://placehold.co/100" width="100" height="100">
+            <h4>CPU</h4>
+            <div class="controller">
+                <div id="cpu-rock" class="rock-icon">ROCK</div>
+                <div id="cpu-paper" class="paper-icon">PAPER</div>
+                <div id="cpu-scissors" class="scissors-icon">SCISSORS</div>
+            </div>
+        </div>
     </div>
     <div id="notification"></div>
 </body>

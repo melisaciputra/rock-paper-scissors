@@ -8,21 +8,31 @@ body {
 }
 
 h1,h2,h3,h4{
-    text-align:center;
+  text-align:center;
 }
 
-#player-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10%;
+#container{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
 }
 
-#opponent-container {
-    text-align: center;
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #notification {
     white-space: pre-line;
 }
 
+.playerinput{
+  cursor: pointer;
+}
+
+.controller {
+  display: flex;
+  gap: 10px;
+}
