@@ -2,10 +2,39 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>ROck Paper Scissors Game</title>
-    <script src="rock-paper-scissors.js"></script>
+    <title>Rock Paper Scissors Game</title>
+    <script src="rock-paper-scissors.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <h1><span class="purple">Rock,</span> <span class="blue">Paper,</span> <span class="yellow">Scissors</span></h1>
+    <p id="gameBoard">( Best of 5 Rounds )</p>
+    <div id="container">
+        <div id="player-container" class="game-container">
+            <h2>YOU</h2>
+            <div class="controller">
+                <div id="rock" class="playerinput icons"><img src="icon-rock.png" height=98px><h4 class="purple">ROCK</h4></div>
+                <div id="paper" class="playerinput icons"><img src="icon-paper.png" height=98px><h4 class="blue">PAPER</h4></div>
+                <div id="scissors" class="playerinput icons"><img src="icon-scissors.png" height=98px><h4 class="yellow">SCISSORS</h4></div>
+            </div>
+
+        </div>
+        <div id="scores">
+            <h2><span id="playerScore">0</span> VS <span id="cpuScore">0</span></h2>
+        </div>
+
+        <div id="opponent-container" class="game-container">
+            <h2>CPU</h2>
+            <div class="controller">
+                <div id="cpu-rock" class="icons"><img src="icon-rock.png" height=98px><h4 class="purple">ROCK</h4></div>
+                <div id="cpu-paper" class="icons"><img src="icon-paper.png" height=98px><h4 class="blue">PAPER</h4></div>
+                <div id="cpu-scissors" class="icons"><img src="icon-scissors.png" height=98px><h4 class="yellow">SCISSORS</h4></div>
+            </div>
+        </div>
+    </div>
+    <div id="notification"></div>
 </body>
 </html>
